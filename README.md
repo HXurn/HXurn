@@ -1,59 +1,43 @@
 HXurn
 
-A Personal Termux Environment & Shell Dashboard
+A personal Termux environment with a custom shell dashboard.
 
-HXurn is a personal Termux environment project designed to provide a cleaner, more organized, and practical command-line experience on Android devices.
+Overview
+
+HXurn is a personal project for customizing and organizing the Termux environment on Android.
 
 Features
 
-- Custom shell dashboard.
-- Organized Termux environment.
-- Personalized terminal interface.
-- Shell configuration customization.
-- Lightweight and easy to maintain.
+- Custom terminal dashboard
+- Personalized shell environment
+- Simple and lightweight design
+- Organized Termux setup
 
-Project Structure
+Files
 
-HXurn/
-├── README.md
-└── dashboard.sh
+File| Description
+"dashboard.sh"| Main HXurn dashboard script
 
 Requirements
 
-- Android device
-- "Termux" (https://github.com/termux/termux-app)
-- Bash shell
+- Android
+- Termux
+- Bash
 
-Installation
-
-Clone the repository:
-
-git clone YOUR_REPOSITORY_URL
-
-Enter the project directory:
-
-cd HXurn
+Usage
 
 Make the dashboard executable:
 
 chmod +x dashboard.sh
 
-Run the dashboard:
+Run it:
 
 ./dashboard.sh
 
-Project Goals
+Disclaimer
 
-HXurn aims to create a simple, functional, and personalized Termux environment while keeping the project organized and easy to maintain.
-
-Notes
-
-This repository contains selected project files only. Personal backups, private configurations, credentials, and temporary files are intentionally excluded.
-
-License
-
-This project is available for personal use and modification.
+This project is intended for personal use and experimentation. Use it at your own discretion.
 
 ---
 
-HXurn — A cleaner way to use Termux.
+HXurn — Personal Termux Environment
