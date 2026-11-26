@@ -1,9 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-C='\033[36m'
-G='\033[32m'
-D='\033[90m'
-R='\033[0m'
+C=$'\033[36m'
+G=$'\033[32m'
+D=$'\033[90m'
+R=$'\033[0m'
 
 device=$(getprop ro.product.model)
 android=$(getprop ro.build.version.release)
@@ -65,52 +65,52 @@ folders=$(find . -mindepth 1 -maxdepth 1 -type d 2>/dev/null | wc -l)
 files=$(find . -mindepth 1 -maxdepth 1 -type f 2>/dev/null | wc -l)
 
 # Header
-printf "${C}"
+printf '%s' "$C"
 printf "  ╭────────────────────────────────────╮\n"
 printf "  │              HXurn                │\n"
 printf "  │       Termux Environment           │\n"
 printf "  ╰────────────────────────────────────╯\n"
-printf "${R}\n"
+printf '%s\n' "$R"
 
-printf "${G}  Shell     : Zsh %s${R}\n" "$shell_version"
-printf "${G}  Time      : %s${R}\n\n" "$(date +%H:%M:%S)"
+printf '%s  Shell     : Zsh %s%s\n' "$G" "$shell_version" "$R"
+printf '%s  Time      : %s%s\n\n' "$G" "$(date +%H:%M:%S)" "$R"
 
-printf "${C}  Project   : %s${R}\n" "${PWD##*/}"
-printf "${C}  Directory : %s${R}\n\n" "$PWD"
+printf '%s  Project   : %s%s\n' "$C" "${PWD##*/}" "$R"
+printf '%s  Directory : %s%s\n\n' "$C" "$PWD" "$R"
 
-printf "${D}System Info:${R}\n"
-printf "  ${C}Distro${R}    : Android %s\n" "$android"
-printf "  ${C}Host${R}      : %s\n" "$device"
-printf "  ${C}Kernel${R}    : %s\n" "$kernel"
-
-printf "\n"
-printf "  ${C}Uptime${R}    : %s\n" "$uptime"
-printf "  ${C}Load${R}      : %s\n" "$load"
-printf "  ${C}Processes${R}  : %s\n" "$processes"
+printf '%sSystem Info:%s\n' "$D" "$R"
+printf '  %sDistro%s    : Android %s\n' "$C" "$R" "$android"
+printf '  %sHost%s      : %s\n' "$C" "$R" "$device"
+printf '  %sKernel%s    : %s\n' "$C" "$R" "$kernel"
 
 printf "\n"
-printf "  ${C}CPU${R}       : (%s vCPU)\n" "$cores"
-printf "  ${C}Memory${R}    : %s\n" "$mem"
+printf '  %sUptime%s    : %s\n' "$C" "$R" "$uptime"
+printf '  %sLoad%s      : %s\n' "$C" "$R" "$load"
+printf '  %sProcesses%s  : %s\n' "$C" "$R" "$processes"
 
-printf "\n${D}Temperature:${R} %s\n" "$temperature"
+printf "\n"
+printf '  %sCPU%s       : (%s vCPU)\n' "$C" "$R" "$cores"
+printf '  %sMemory%s    : %s\n' "$C" "$R" "$mem"
 
-printf "\n${D}Disk Usage:${R}\n"
+printf '\n%sTemperature:%s %s\n' "$D" "$R" "$temperature"
+
+printf '\n%sDisk Usage:%s\n' "$D" "$R"
 printf "  /data       %s used out of %s\n" "$disk_used" "$disk_total"
 printf "  Available   %s free\n" "$disk_free"
 
 filled=$((used_pct * 30 / 100))
 empty=$((30 - filled))
 
-printf "  ${G}"
+printf '  %s' "$G"
 printf '%*s' "$filled" '' | tr ' ' '#'
-printf "${D}"
+printf '%s' "$D"
 printf '%*s' "$empty" '' | tr ' ' '-'
-printf "${R} %s%%\n" "$used_pct"
-
+printf '%s %s%%\n' "$R" "$used_pct"
 printf "\033[90m──────────────────────────────────────────────────────────────\033[0m\n"
 printf "\033[36m HXurn \033[90m│\033[32m TERMUX \033[90m│\033[36m ZSH \033[90m│\033[32m NORMAL\033[0m\n"
 printf "\033[90m──────────────────────────────────────────────────────────────\033[0m\n"
 
-printf "\n\033[36mDirectory Summary:\033[0m\n"
+printf "\n\033[36mDirectory Summary
+:\033[0m\n"
 printf "  Folders : %s\n" "$folders"
 printf "  Files   : %s\n" "$files"
