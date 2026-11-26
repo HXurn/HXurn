@@ -59,6 +59,9 @@ bash update.sh
 
 The updater checks GitHub for the latest dashboard version and backs up the existing dashboard before installing an update.
 
+> Note: The screenshot shows HXurn running in a customized Zsh environment.
+> HXurn itself only provides the system dashboard.
+
 License
 
 HXurn is licensed under the GNU General Public License v3.0 (GPL-3.0).
@@ -68,5 +71,5 @@ See the "LICENSE" (LICENSE) file for details.
 ---
 
 <p align="center">
-  Made for Termux ❤️
+  It's getting nippy in here 😂
 </p>
