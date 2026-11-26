@@ -1,43 +1,72 @@
-HXurn
+# HXurn
 
-A personal Termux environment with a custom shell dashboard.
+<p align="center">
+  <img src="HXurn-SS.jpg" alt="HXurn Termux Dashboard" width="700">
+</p>
 
-Overview
+  **A lightweight system dashboard for Termux.**
+</p><p align="center">
+  <img src="https://img.shields.io/badge/Platform-Termux-brightgreen">
+  <img src="https://img.shields.io/badge/Shell-Bash-blue">
+  <img src="https://img.shields.io/badge/License-GPL--3.0-blue">
+</p>What it does
 
-HXurn is a personal project for customizing and organizing the Termux environment on Android.
+- Displays Android device information.
+- Shows current shell and shell version.
+- Displays current project and working directory.
+- Shows system uptime and running processes.
+- Displays CPU core count.
+- Monitors memory usage.
+- Displays device temperature.
+- Shows storage usage and available space.
+- Provides a directory summary.
 
-Features
+Installation
 
-- Custom terminal dashboard
-- Personalized shell environment
-- Simple and lightweight design
-- Organized Termux setup
+1. Install "Termux" (https://github.com/termux/termux-app).
 
-Files
+2. Update package lists:
+   
+   pkg update
 
-File| Description
-"dashboard.sh"| Main HXurn dashboard script
+3. Install Git:
+   
+   pkg install git
 
-Requirements
+4. Clone the repository:
+   
+   git clone https://github.com/HXurn/HXurn.git
 
-- Android
-- Termux
-- Bash
+5. Enter the project directory:
+   
+   cd HXurn
+
+6. Run the installer:
+   
+   bash install.sh
 
 Usage
 
-Make the dashboard executable:
+Run the dashboard with:
 
-chmod +x dashboard.sh
+bash ~/.config/hxurn/dashboard.sh
 
-Run it:
+Update
 
-./dashboard.sh
+Enter the cloned HXurn repository directory and run:
 
-Disclaimer
+bash update.sh
 
-This project is intended for personal use and experimentation. Use it at your own discretion.
+The updater checks GitHub for the latest dashboard version and backs up the existing dashboard before installing an update.
+
+License
+
+HXurn is licensed under the GNU General Public License v3.0 (GPL-3.0).
+
+See the "LICENSE" (LICENSE) file for details.
 
 ---
 
-HXurn — Personal Termux Environment
+<p align="center">
+  Made for Termux ❤️
+</p>
